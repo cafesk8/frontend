@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/cafesk8/frontend/issues"
   },
-  "homepage": "https://github.com/cafesk8/frontend#readme"
+  "homepage": "https://github.com/cafesk8/frontend#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1"
+  }
 }
