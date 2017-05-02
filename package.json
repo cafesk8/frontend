@@ -1,0 +1,19 @@
+{
+  "name": "jan_cafourek-frontend_setup",
+  "version": "1.0.0",
+  "description": "Setup for front-end development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cafesk8/frontend.git"
+  },
+  "author": "Jan Cafourek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cafesk8/frontend/issues"
+  },
+  "homepage": "https://github.com/cafesk8/frontend#readme"
+}
