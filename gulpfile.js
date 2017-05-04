@@ -6,25 +6,27 @@ var plugins = require("gulp-load-plugins")({
 var vendor = require('gulp-concat-vendor');
 
 gulp.task('clean_vendor_assets',function(){
-	plugins.del(['dist/vendor/*']);
+	plugins.del(['build/vendor/*']);
 })
 
 gulp.task('bowerify', ['clean_vendor_assets'], function() {
 	return gulp.src(plugins.mainBowerFiles('**/*.js'))
-		.pipe(vendor('libs.min.js'))
-		.pipe(gulp.dest('./dist/vendor'));
+		.pipe(vendor('libs.js'))
+		.pipe(gulp.dest('./build/vendor'));
 });
 
 gulp.task('css',['bowerify'],function(){
-	// return gulp.src(['./dist/vendor/css/*']).
+	// return gulp.src(['./build/vendor/css/*']).
 	// 	pipe(plugins.concat('merged.css')).
-	// 	pipe(gulp.dest('./dist/css'));
+	// 	pipe(gulp.dest('./build/css'));
 })
 
 gulp.task('js',['bowerify'],function(){
-	// return gulp.src(['./dist/vendor/js/*']).
+	// return gulp.src(['./build/vendor/js/*']).
 	//  	pipe(vendor('merged-libs.js')).
-	//  	pipe(gulp.dest('./dist/js'));	
+	//  	pipe(gulp.dest('./build/js'));	
 })
+
+/* Minify / concat etc. to dist folder */
 
 gulp.task('default',['bowerify','css','js']);
